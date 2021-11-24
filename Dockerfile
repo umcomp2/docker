@@ -1,7 +1,7 @@
 # Receta automatizada para crear imagen
 #FROM alpine .. .conviene poner la version
 FROM alpine:3.12.1
-EXPOSE 80
+EXPOSE 8080
 #Variable de entorno para el DocumentRoot
 ENV PATH_WEB=/var/www/localhost/htdocs
 #WORKDIR /code
