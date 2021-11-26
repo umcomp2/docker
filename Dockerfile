@@ -20,6 +20,8 @@ RUN rm -rf /tmp/server-web
 COPY httpd.conf /etc/apache2/httpd.conf
 #en ADD se puede poner url en COPY solo archivos locales
 #ADD httpd.conf /etc/apache2//httpd.conf 
+RUN chown -R apache:apache /etc/apache2
+RUN chmod -R 0777 /run
 #CMD ["/usr/sbin/httpd", "-D" , "FOREGROUND", "-f" , "/etc/apache2/httpd.conf"]
 #ENTRYPOINT no permite overwrite del cmd a ejecutar como punto de entrada
 ENTRYPOINT ["/usr/sbin/httpd", "-D" , "FOREGROUND", "-f" , "/etc/apache2/httpd.conf"]
