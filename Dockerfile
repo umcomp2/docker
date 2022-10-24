@@ -1,6 +1,7 @@
 # Receta automatizada para crear imagen
 #FROM alpine .. .conviene poner la version
 FROM alpine:3.12.1
+#The EXPOSE instruction does not actually publish the port. It functions as documentation between the person who builds the image and the person who runs the container
 EXPOSE 8080
 #Variable de entorno para el DocumentRoot
 ENV PATH_WEB=/var/www/localhost/htdocs
